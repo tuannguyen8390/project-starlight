@@ -1,0 +1,12 @@
+services:
+  starlight:
+    build: .
+    image: project-starlight:latest
+    container_name: project-starlight
+    restart: unless-stopped
+    ports:
+      - "8504:8504"
+    volumes:
+      - ./data:/data
+    environment:
+      - STARLIGHT_DATA=/data
