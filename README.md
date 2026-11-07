@@ -3,6 +3,10 @@
 A private family gallery for her paintings, with the things she said (voice notes, videos) linked to each one.
 Runs on your PC; anyone on your Wi-Fi opens it in a phone browser and can add it to the home screen.
 
+This is a for-fun personal/family project, built to scratch a specific itch rather than as a polished product.
+Shared as-is in case it's useful or interesting to someone else — issues and PRs are welcome, but don't expect
+enterprise-grade support.
+
 ## Run it
 
 Requirements: **Python 3.10+** and **Node.js 18+** (needed once, to build the frontend).
