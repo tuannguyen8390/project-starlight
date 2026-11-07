@@ -5,7 +5,7 @@ Runs on your PC; anyone on your Wi-Fi opens it in a phone browser and can add it
 
 ## Run it
 
-You need Python 3.10+ (your `threads-bots` conda env is fine).
+Requirements: **Python 3.10+** and **Node.js 18+** (needed once, to build the frontend).
 
 ```
 pip install -r backend/requirements.txt
@@ -16,8 +16,9 @@ Then, from this folder:
 - **Windows:** double-click `start.bat`
 - **WSL / Mac / Linux:** `./start.sh`
 
-Open <http://localhost:8504>. The built frontend is already included, so Node is only needed if you change the UI
-(`cd frontend && npm install && npm run build`, or `npm run dev` for live reload on port 5173).
+Either script builds the frontend on first run (`frontend/dist` isn't checked into the repo) and then starts the
+server. Open <http://localhost:8504>. For live-reload while editing the UI, run `cd frontend && npm install && npm run dev`
+instead (port 5173).
 
 ## On her phone / your iPhone (same Wi-Fi)
 
