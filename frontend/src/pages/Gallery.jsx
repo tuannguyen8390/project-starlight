@@ -71,7 +71,7 @@ export default function Gallery() {
         <div className="row between">
           <div className="grow">
             <h1 className="h1">Starlight</h1>
-            {stats && <p className="sub">{pluralize(stats.paintings, "painting")} · {stats.with_voice} with her voice</p>}
+            {stats && <p className="sub">{pluralize(stats.paintings, "painting")} · {stats.with_voice} with voice</p>}
           </div>
           <button className="icon-btn" aria-label="Search" onClick={() => { setSearching(!searching); if (searching) setQ(""); }}>
             <Icon name="search" />
@@ -79,7 +79,7 @@ export default function Gallery() {
         </div>
 
         {searching && (
-          <input className="field" autoFocus type="search" placeholder="Search names, tags, or what she said" value={q} onChange={(e) => setQ(e.target.value)} />
+          <input className="field" autoFocus type="search" placeholder="Search names, tags, or what they said" value={q} onChange={(e) => setQ(e.target.value)} />
         )}
 
         <div className="chips">
@@ -109,7 +109,7 @@ export default function Gallery() {
         {items && items.length === 0 && (
           <div className="empty">
             <p className="h2">{filter === "all" && !q ? "Your gallery is waiting" : "Nothing here yet"}</p>
-            <p>{filter === "all" && !q ? "Tap + to add her paintings. They land in the Inbox first." : "Try another filter or search."}</p>
+            <p>{filter === "all" && !q ? "Tap + to add paintings. They land in the Inbox first." : "Try another filter or search."}</p>
           </div>
         )}
 
@@ -125,7 +125,7 @@ export default function Gallery() {
                   <div className="art">
                     <img src={p.thumb_url} alt={p.title || "Painting"} loading="lazy" />
                     {p.favorite && <span className="badge star"><Icon name="star" size={16} fill="var(--sunny)" stroke="var(--ink)" label="Favorite" /></span>}
-                    {p.clip_count > 0 && <span className="badge"><Icon name="mic" size={16} stroke="var(--ink)" label="Has her voice" /></span>}
+                    {p.clip_count > 0 && <span className="badge"><Icon name="mic" size={16} stroke="var(--ink)" label="Has voice" /></span>}
                   </div>
                   <div className="cap">
                     <div className="t">{p.title || "Untitled"}</div>

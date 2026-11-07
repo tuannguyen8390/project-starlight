@@ -57,7 +57,7 @@ function AddSheet({ onClose }) {
         <input id="add-lib" className="hidden-input" type="file" multiple accept="image/*,video/*,audio/*" onChange={pick} />
         <label className="btn block" htmlFor="add-photo"><Icon name="camera" /> Take a photo of a painting</label>
         <input id="add-photo" className="hidden-input" type="file" accept="image/*" capture="environment" onChange={pick} />
-        <label className="btn block" htmlFor="add-film"><Icon name="video" /> Film her</label>
+        <label className="btn block" htmlFor="add-film"><Icon name="video" /> Film them</label>
         <input id="add-film" className="hidden-input" type="file" accept="video/*" capture="user" onChange={pick} />
       </div>
     </div>

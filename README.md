@@ -1,11 +1,12 @@
 # Project Starlight
 
-A private family gallery for her paintings, with the things she said (voice notes, videos) linked to each one.
-Runs on your PC; anyone on your Wi-Fi opens it in a phone browser and can add it to the home screen.
+A private family gallery for a kid's artwork, with the things they said about each one (voice notes, videos)
+linked right alongside it. Runs on your PC; anyone on your Wi-Fi opens it in a phone browser and can add it to
+the home screen.
 
-This is a for-fun personal/family project, built to scratch a specific itch rather than as a polished product.
-Shared as-is in case it's useful or interesting to someone else — issues and PRs are welcome, but don't expect
-enterprise-grade support.
+This is a for-fun personal/family project, built to scratch a specific itch (my own kid's paintings) rather than
+as a polished product. Shared as-is in case it's useful or interesting to someone else — issues and PRs are
+welcome, but don't expect enterprise-grade support.
 
 ## Run it
 
@@ -24,14 +25,14 @@ Either script builds the frontend on first run (`frontend/dist` isn't checked in
 server. Open <http://localhost:8504>. For live-reload while editing the UI, run `cd frontend && npm install && npm run dev`
 instead (port 5173).
 
-## On her phone / your iPhone (same Wi-Fi)
+## On their phone / your iPhone (same Wi-Fi)
 
 1. Find the PC's address: run `ipconfig` and look for the IPv4 address, e.g. `192.168.1.23`.
 2. Allow port 8504 through Windows Firewall when it asks (private networks only).
 3. On the iPhone open `http://192.168.1.23:8504` in Safari, then Share → **Add to Home Screen**.
 
 Note: on a plain `http://` address Safari blocks the in-page microphone and camera, so recording uses the phone's own
-recorder through the file picker ("Record her" → Voice note / Film her). That already works. If you later want true
+recorder through the file picker ("Record" → Voice note / Film). That already works. If you later want true
 in-page recording, serve over HTTPS (Tailscale does this with one command).
 
 ## How it works
@@ -40,8 +41,8 @@ in-page recording, serve over HTTPS (Tailscale does this with one command).
   falling back to the file's date. Duplicates are skipped by content hash.
 - **Inbox**: new paintings wait here. Select some → set a date, add to the gallery, or sort one by one (name, date, tags, favorite).
 - **Match a clip**: each clip shows the paintings closest to it in time. Tick one (or several) and link.
-- **Painting page**: her words under the painting. Fix the transcript, record her right there, or link a clip.
-- **Search** finds paintings by name, tag, *or what she said*.
+- **Painting page**: their words under the painting. Fix the transcript, record them right there, or link a clip.
+- **Search** finds paintings by name, tag, *or what they said*.
 
 ## Settings (environment variables)
 
@@ -55,7 +56,7 @@ adding your own auth/reverse-proxy in front of it.
 
 ## Optional extras
 
-- **Transcribe her voice on this PC** (English + Vietnamese): `pip install faster-whisper`, then use "Write them for me" on a clip.
+- **Transcribe voice notes on this PC** (English + Vietnamese): `pip install faster-whisper`, then use "Write them for me" on a clip.
   Without it that button just says it isn't installed; you can still type the words.
 - **iPhone HEIC photos**: `pip install pillow-heif`. (Safari normally converts to JPEG on upload, so you may never need it.)
 

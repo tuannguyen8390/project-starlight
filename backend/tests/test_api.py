@@ -123,7 +123,7 @@ def test_edit_search_bulk_and_stats(client):
     cid = client.get("/api/clips").json()[0]["id"]
     client.patch(f"/api/clips/{cid}", json={"transcript": "the sun is happy"})
     client.post("/api/links", json={"painting_id": ids[1], "clip_id": cid})
-    assert client.get("/api/paintings", params={"q": "happy"}).json()[0]["id"] == ids[1]  # finds via her words
+    assert client.get("/api/paintings", params={"q": "happy"}).json()[0]["id"] == ids[1]  # finds via their words
     s = client.get("/api/stats").json()
     assert s == {"paintings": 2, "with_voice": 1, "inbox_paintings": 0, "inbox_clips": 0}
 

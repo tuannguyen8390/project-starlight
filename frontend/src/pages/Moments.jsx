@@ -5,7 +5,7 @@ import ClipCard from "../components/ClipCard";
 import Shell from "../components/Shell";
 import { pluralize } from "../util";
 
-/** Everything she's said, newest first, with the paintings each clip belongs to. */
+/** Everything they've said, newest first, with the paintings each clip belongs to. */
 export default function Moments() {
   const [clips, setClips] = useState(null);
   const [paintings, setPaintings] = useState({});

@@ -17,7 +17,7 @@ export default function Login({ onDone }) {
     <div className="shell">
       <form className="page" onSubmit={submit} style={{ justifyContent: "center", paddingBottom: 20 }}>
         <h1 className="h1">Starlight</h1>
-        <p className="sub">Her paintings, and the things she said about them.</p>
+        <p className="sub">Their paintings, and the things they said about them.</p>
         <label className="sub">
           Family password
           <input className="field" type="password" autoFocus value={pw} onChange={(e) => setPw(e.target.value)} />

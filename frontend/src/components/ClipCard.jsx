@@ -49,7 +49,7 @@ function AudioPlayer({ src }) {
   );
 }
 
-/** One thing she said: player, her words (editable), and optional action slot. */
+/** One thing they said: player, their words (editable), and optional action slot. */
 export default function ClipCard({ clip, onChange, children }) {
   const [editing, setEditing] = useState(false);
   const [text, setText] = useState(clip.transcript);
@@ -85,7 +85,7 @@ export default function ClipCard({ clip, onChange, children }) {
 
       {editing ? (
         <>
-          <textarea className="words" value={text} onChange={(e) => setText(e.target.value)} aria-label="What she said" autoFocus />
+          <textarea className="words" value={text} onChange={(e) => setText(e.target.value)} aria-label="What they said" autoFocus />
           <div className="row">
             <button className="btn" onClick={save}>Save words</button>
             <button className="link-btn" onClick={() => { setText(clip.transcript); setEditing(false); }}>Cancel</button>

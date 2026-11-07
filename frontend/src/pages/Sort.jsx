@@ -69,7 +69,7 @@ export default function Sort() {
         {p && (
           <>
             <div className="frame"><img src={p.url} alt="Painting to sort" /></div>
-            <label className="sub">Name<input className="field" value={form.title} onChange={(e) => setForm({ ...form, title: e.target.value })} placeholder="What she calls it" /></label>
+            <label className="sub">Name<input className="field" value={form.title} onChange={(e) => setForm({ ...form, title: e.target.value })} placeholder="What they call it" /></label>
             <label className="sub">Painted on<input className="field" type="date" value={form.date} onChange={(e) => setForm({ ...form, date: e.target.value })} /></label>
             <label className="sub">Tags (comma separated)<input className="field" value={form.tags} onChange={(e) => setForm({ ...form, tags: e.target.value })} placeholder="rainbow, sun" /></label>
             <button className="chip" aria-pressed={form.favorite} onClick={() => setForm({ ...form, favorite: !form.favorite })} style={{ alignSelf: "flex-start" }}>

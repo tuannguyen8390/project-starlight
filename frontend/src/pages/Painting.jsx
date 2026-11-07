@@ -101,7 +101,7 @@ export default function Painting() {
       bare
       bar={
         <div className="footer">
-          <button className="btn primary grow" onClick={() => setSheet("record")}><Icon name="mic" /> Record her</button>
+          <button className="btn primary grow" onClick={() => setSheet("record")}><Icon name="mic" /> Record them</button>
           <button className="btn primary grow" style={{ background: "var(--paper-raised)" }} onClick={() => setSheet("link")}><Icon name="link" /> Link a clip</button>
         </div>
       }
@@ -125,7 +125,7 @@ export default function Painting() {
 
         {edit && (
           <div className="card" style={{ display: "flex", flexDirection: "column", gap: 10 }}>
-            <label className="sub">Name<input className="field" value={form.title} onChange={(e) => setForm({ ...form, title: e.target.value })} placeholder="What she calls it" /></label>
+            <label className="sub">Name<input className="field" value={form.title} onChange={(e) => setForm({ ...form, title: e.target.value })} placeholder="What they call it" /></label>
             <label className="sub">Painted on<input className="field" type="date" value={form.date} onChange={(e) => setForm({ ...form, date: e.target.value })} /></label>
             <label className="sub">Tags (comma separated)<input className="field" value={form.tags} onChange={(e) => setForm({ ...form, tags: e.target.value })} placeholder="rainbow, sun" /></label>
             <div className="row between">
@@ -136,12 +136,12 @@ export default function Painting() {
         )}
 
         <div className="row between" style={{ marginTop: 4 }}>
-          <h2 className="h2">What she said</h2>
+          <h2 className="h2">What they said</h2>
           <span className="count">{p.clips.length}</span>
         </div>
         {progress && <div className="toast">Uploading {progress.done} of {progress.total}…</div>}
         {p.clips.length === 0 && !progress && (
-          <div className="empty"><p>Nothing linked yet. Record her, or link a clip from the Inbox.</p></div>
+          <div className="empty"><p>Nothing linked yet. Record them, or link a clip from the Inbox.</p></div>
         )}
         {p.clips.map((c) => (
           <ClipCard key={c.id} clip={c} onChange={load}>
@@ -153,15 +153,15 @@ export default function Painting() {
       {sheet === "link" && <LinkSheet painting={p} onClose={() => setSheet(null)} onLinked={() => { setSheet(null); load(); refresh(); }} />}
       {sheet === "record" && (
         <div className="sheet-back" onClick={() => setSheet(null)}>
-          <div className="sheet" role="dialog" aria-label="Record her" onClick={(e) => e.stopPropagation()}>
+          <div className="sheet" role="dialog" aria-label="Record" onClick={(e) => e.stopPropagation()}>
             <div className="row between">
-              <h2 className="h2">Record her</h2>
+              <h2 className="h2">Record them</h2>
               <button className="icon-btn" onClick={() => setSheet(null)} aria-label="Close"><Icon name="close" /></button>
             </div>
             <p className="sub">Your phone's recorder opens. When you're done, it lands here, already linked.</p>
             <label className="btn primary block" htmlFor="rec-audio"><Icon name="mic" /> Voice note</label>
             <input id="rec-audio" className="hidden-input" type="file" accept="audio/*" onChange={record} />
-            <label className="btn block" htmlFor="rec-video"><Icon name="video" /> Film her</label>
+            <label className="btn block" htmlFor="rec-video"><Icon name="video" /> Film them</label>
             <input id="rec-video" className="hidden-input" type="file" accept="video/*" capture="user" onChange={record} />
             <label className="btn block" htmlFor="rec-file"><Icon name="gallery" /> Pick a recording I already have</label>
             <input id="rec-file" className="hidden-input" type="file" multiple accept="audio/*,video/*" onChange={record} />

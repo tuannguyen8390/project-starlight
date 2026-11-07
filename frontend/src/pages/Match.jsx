@@ -7,7 +7,7 @@ import Shell from "../components/Shell";
 import { useStats } from "../stats";
 import { dayLabel, dayTime, gap } from "../util";
 
-/** Pair one clip with the painting(s) she was talking about. Closest in time first. */
+/** Pair one clip with the painting(s) they were talking about. Closest in time first. */
 export default function Match() {
   const { id } = useParams();
   const nav = useNavigate();

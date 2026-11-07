@@ -1,6 +1,6 @@
 """main.py — Project Starlight API
 
-A private family gallery for a child's paintings, with the things she says
+A private family gallery for a child's paintings, with the things they say
 (voice notes / videos) linked to each painting.
 
 Everything that differs between "on my PC" and "on a server" is configuration:
